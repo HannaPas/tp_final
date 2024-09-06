@@ -3,7 +3,7 @@ import Home from '../Pages/home';
 import Productos from '../Pages/productos';
 import Login from '../Pages/login';
 import Registro from '../Pages/registro';
-import '../styles/style.css';  
+import '../Styles/style.css';  
 
 function App() {
   return (
