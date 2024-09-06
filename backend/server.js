@@ -10,13 +10,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //conexion base de datos 
 const pool = mysql.createPool({
-  host: 'localhost',       
-  user: 'root',           
-  password: '',           
-  database: 'productos',
+  host: 'bfbmlbq74me1lezu0plk-mysql.services.clever-cloud.com',       
+  user: 'ugtqzu5m9poxlvyb',           
+  password: '8nZt2ipsNqzg06f2subG',           
+  database: 'bfbmlbq74me1lezu0plks',
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
+  port: 3306
 });
 
 // Ruta para obtener productos
