@@ -5,8 +5,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    emptyOutDir: true,
   },
-  base: './',
+  rollupOptions: {
+    input: {
+      main: './index.html',
+      login: './src/login.html',
+      productos: './src/productos.html',
+      registro: './src/registro.html',
+    },
+  },
 });
