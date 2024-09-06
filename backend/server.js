@@ -1,37 +1,24 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const mysql = require('mysql2');
 
 const app = express(); 
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//conexion base de datos 
-const pool = mysql.createPool({
-  host: 'bfbmlbq74me1lezu0plk-mysql.services.clever-cloud.com',       
-  user: 'ugtqzu5m9poxlvyb',           
-  password: '8nZt2ipsNqzg06f2subG',           
-  database: 'bfbmlbq74me1lezu0plks',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-  port: 3306
-});
+// Datos estáticos de los perfumes
+const productos = [
+  { nombre: 'Chanel', precio: 60.00, stock: 25, codigo: 1 },
+  { nombre: 'Dior', precio: 50.00, stock: 15, codigo: 2 },
+  { nombre: 'Dore', precio: 70.00, stock: 30, codigo: 3 },
+  { nombre: 'Vitamina', precio: 40.00, stock: 20, codigo: 4 },
+  { nombre: 'Victoria Secret', precio: 55.00, stock: 12, codigo: 5 }
+];
 
 // Ruta para obtener productos
 app.get('/api/productos', (req, res) => {
-  const query = 'SELECT nombre, precio, stock, codigo FROM productos';
-
-  pool.query(query, (err, results) => {
-    if (err) {
-      console.error('Error al ejecutar la consulta:', err);
-      res.status(500).send('Error al obtener los productos');
-      return;
-    }
-    res.json(results);
-  });
+  res.json(productos);
 });
 
 const PORT = 5000;
