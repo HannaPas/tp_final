@@ -1,4 +1,4 @@
-// Función para hacer la solicitud al backend y mostrar los productos en la tabla
+
 async function obtenerProductos() {
     try {
         const response = await fetch('http://localhost:5000/api/productos');
@@ -7,7 +7,7 @@ async function obtenerProductos() {
        
         const tablaBody = document.getElementById('tabla-productos-body');
 
-        // Recorre los productos y crea las filas para la tabla
+        
         productos.forEach(producto => {
             const fila = document.createElement('tr');
 
@@ -25,6 +25,6 @@ async function obtenerProductos() {
     }
 }
 
-// Llama a la función cuando se carga la página
+
 document.addEventListener('DOMContentLoaded', obtenerProductos);
 

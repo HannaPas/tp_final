@@ -1,0 +1,110 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4e1ff;
+  color: #4a148c;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+main {
+  flex-grow: 1; 
+}
+
+
+h2 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: #6a1b9a;
+}
+
+header {
+  padding: 10px 0;
+}
+
+/* Menú de navegación */
+.menu {
+  background-color: #d1c4e9;
+  padding: 20px; 
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #4a148c;
+  font-weight: bold;
+  font-size: 1.2rem; 
+}
+
+.menu ul li a:hover {
+  color: #fff;
+  background-color: #4a148c;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Galería de perfumes */
+.perfume-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.perfume-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px; 
+}
+
+.perfume-item img {
+  width: 150px; 
+  height: 200px;
+  object-fit: cover; 
+  margin-bottom: 10px;
+}
+
+.perfume-item p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: #d1c4e9;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+footer p {
+  color: #4a148c;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: #4a148c;
+  font-size: 1rem;
+  text-align: center;
+}

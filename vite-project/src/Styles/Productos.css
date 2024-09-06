@@ -1,0 +1,36 @@
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #b288d8;
+  }
+  
+  th {
+    background-color: #b288d8;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  td {
+    background-color: #f9f1ff;
+    transition: background-color 0.3s ease-in-out;  
+  }
+  
+  tr:hover td {
+    background-color: #e0c2ff;  
+  }
+  
+  h2 {
+    text-align: center;
+    color: #8134af;
+    font-size: 28px;
+  }
+  
